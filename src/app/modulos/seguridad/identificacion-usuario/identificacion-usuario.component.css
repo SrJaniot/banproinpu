@@ -1,0 +1,145 @@
+/* Clases de Materialize CSS */
+.input-field {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.input-field label {
+  color: #9e9e9e;
+  position: absolute;
+  top: 0.8rem;
+  left: 0.75rem;
+  font-size: 1rem;
+  cursor: text;
+  transition: color 0.2s ease, top 0.2s ease, font-size 0.2s ease;
+}
+
+.input-field .prefix {
+  position: absolute;
+  width: 3rem;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.input-field .prefix.active {
+  color: #26a69a;
+}
+
+.input-field input {
+  margin: 0;
+  padding: 0 0 0 3rem;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  outline: none;
+  height: 3rem;
+  font-size: 1.3rem;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  transition: border 0.3s;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+.input-field input:focus + label {
+  color: #26a69a;
+  top: -14px;
+  font-size: 0.8rem;
+}
+
+.input-field input.valid {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+.input-field input.valid + label {
+  color: #26a69a;
+}
+
+.input-field input.invalid {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336;
+}
+
+.input-field input.invalid + label {
+  color: #f44336;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field i.material-icons {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.5rem;
+}
+
+.input-field label {
+  position: absolute;
+  left: 3rem;
+  top: 0.75rem;
+  transition: 0.2s ease all;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.boton-azul{
+  background-color: rgba(0, 34, 155, 0.765);
+}
+.show-errors{
+  color: #ff0000;
+}
+.hipervinculo{
+ color: #4644ecbb;
+ font-style: italic;
+ font-weight: bold;
+}
+.hipervinculo2{
+ color: #000000;
+ font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label {
+  color: #2196f3 !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #2196f3 !important;
+  box-shadow: 0 1px 0 0 #2196f3 !important;
+}
+
+/* Estilos adicionales */
+/* Estilo para el fondo */
+.bg-secondary {
+  background-color: #f0f0f0; /* Cambia el color de fondo según sea necesario */
+}
+
+/* Estilo para el color del texto */
+.text-secondary {
+  color: #333; /* Cambia el color del texto según sea necesario */
+}
+

@@ -1,0 +1,7 @@
+.custom-icon {
+  color: #ccc; /* Cambia esto al color que quieras para el icono */
+}
+
+.custom-icon:hover {
+  color: #fff; /* Cambia esto al color que quieras cuando el ratón pasa por encima del icono */
+}
