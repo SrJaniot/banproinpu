@@ -6,19 +6,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/inicio">Inicio</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/parametros">Parametros</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/personas">Personas</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li *ngIf="sesionActiva" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Proyectos
           </a>
@@ -32,27 +32,27 @@
           </ul>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/certificacion">Certificación</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/presupuesto">Presupuesto</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/plan-desarrollo">P Desarrollo</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/consultas">Consultas</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/informes">Informes</a>
         </li>
 
-        <li class="nav-item">
+        <li *ngIf="sesionActiva" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/explorar-archivos">Exp Archivos</a>
         </li>
 
@@ -60,7 +60,7 @@
       </ul>
 
 
-      <a routerLink="/seguridad/cerrar-sesion" ><i class="bi bi-box-arrow-in-right fs-3 custom-icon"></i></a>
+      <a *ngIf="sesionActiva" routerLink="/seguridad/cerrar-sesion" ><i class="bi bi-box-arrow-in-right fs-3 custom-icon"></i></a>
 
 
 

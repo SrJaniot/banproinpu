@@ -70,6 +70,7 @@ export class IdentificacionUsuarioComponent {
 
 
               //en esta parte tendre que mandarle la informacion de respuesta.datos que es una lista
+              this.servicio.AlmacenarUsuarioContraseniaLocalStorage(usuario,clave);
               this.servicio.changeDatos(Lista_Datosendpointiniciar_sesion);
               this.router.navigate(['/seguridad/login-esquemas']);
 
