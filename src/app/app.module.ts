@@ -12,6 +12,7 @@ import { PiePaginaComponent } from './publico/pagina-maestra/pie-pagina/pie-pagi
 import { NgToastModule } from 'ng-angular-popup';
 
 import { HttpClientModule } from '@angular/common/http';
+
 //import { HttpClientModule } from '@angular/common/http'; importar este modulo que me permite hacer peticiones http
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     RutaNoEncontradaComponent,
     EncabezadoComponent,
     MenuLateralComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+   
   ],
   imports: [
     BrowserModule,

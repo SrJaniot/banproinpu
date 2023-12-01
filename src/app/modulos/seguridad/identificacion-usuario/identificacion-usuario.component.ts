@@ -4,6 +4,7 @@ import { NgToastService } from 'ng-angular-popup';
 import { SeguridadService } from '../../../servicios/seguridad.service';
 import { RespuestaServer } from '../../../Modelos/RespuestaServer.model';
 import { Datosendpointiniciar_sesionModel } from '../../../Modelos/Datosendpointiniciar_sesion';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-identificacion-usuario',
@@ -20,6 +21,7 @@ export class IdentificacionUsuarioComponent {
     private fb: FormBuilder,
     private toast: NgToastService,
     private servicio: SeguridadService,
+    private router: Router,
   ) {
 
   }
@@ -42,19 +44,22 @@ export class IdentificacionUsuarioComponent {
     }else{
      let usuario = this.fGroup.controls['usuario'].value;
      let clave = this.fGroup.controls['clave'].value;
-     console.log(usuario);
-     console.log(clave);
+     //console.log(usuario);
+     //console.log(clave);
      this.servicio.IdentificarUsuario(usuario,clave).subscribe({
         next: (respuesta: RespuestaServer) => {
           if(respuesta && respuesta.CODIGO == 1){
-            this.toast.success({detail:"EXITO",summary:"Usuario identificado",duration:5000, position:'topCenter'});
+            //this.toast.success({detail:"EXITO",summary:"Usuario identificado",duration:5000, position:'topCenter'});
             //console.log(respuesta);
             //console.log(respuesta.CODIGO);
             //console.log(respuesta.MENSAJE);
             //console.log(respuesta.DATOS);
             if (respuesta.DATOS) {
-              //let Datosendpointiniciar_sesion = respuesta.DATOS[0] as Datosendpointiniciar_sesionModel;
+              let Lista_Datosendpointiniciar_sesion = respuesta.DATOS as Datosendpointiniciar_sesionModel [];
               //console.log(Datosendpointiniciar_sesion);
+              //let PrimerElementoDeLaLista =Datosendpointiniciar_sesion[0];
+              //console.log(key);
+              //console.log(key.id);
               //console.log(Datosendpointiniciar_sesion.id);
               //console.log(Datosendpointiniciar_sesion.esquema_db);
               //console.log(Datosendpointiniciar_sesion.departamentos_id);
@@ -65,6 +70,10 @@ export class IdentificacionUsuarioComponent {
 
 
               //en esta parte tendre que mandarle la informacion de respuesta.datos que es una lista
+              this.servicio.changeDatos(Lista_Datosendpointiniciar_sesion);
+              this.router.navigate(['/seguridad/login-esquemas']);
+
+
               //de objetos de tipo Datosendpointiniciar_sesionModel a un componente nuevo para elejir
               //con que database se quiere loguear. sabiendo que respuesta.datos trae la informacion de las db existentes
 
