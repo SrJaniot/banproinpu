@@ -1,0 +1,58 @@
+
+<div class="container rounded shadow-lg p-5 my-5" style="background-color: #333; color: #f8f9fa;">
+  <form action="enviar.php" method="post">
+    <h1>PARAMETROS</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="administrador">Administrador</label>
+          <input type="text" class="form-control" id="administrador" name="administrador" value="Jose Herrera">
+        </div>
+
+        <div class="form-group">
+          <label for="departamento">Departamento</label>
+          <select class="form-control" id="departamento" name="departamento">
+            <option value="Santander">Santander</option>
+            <option value="Bogotá">Bogotá</option>
+            <option value="Cali">Cali</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="municipio">Municipio</label>
+          <input type="text" class="form-control" id="municipio" name="municipio" value="Lebrija">
+        </div>
+
+        <div class="form-group">
+          <label for="cuenta_correo">Cuenta Correo</label>
+          <input type="email" class="form-control" id="cuenta_correo" name="cuenta_correo" value="banpru@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="clave_correo">Clave Correo</label>
+          <input type="password" class="form-control" id="clave_correo" name="clave_correo" value="vgfruuhh56frdeskjh">
+        </div>
+      </div>
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <legend>Archivos adjuntos</legend>
+          <label for="foto_app1">Fotografía de la aplicación</label>
+          <input type="file" class="form-control-file" id="foto_app1" name="foto_app1" required>
+          <small class="text-muted">Debe seleccionar una fotografía de la aplicación</small>
+        </div>
+
+        <div class="form-group">
+          <label for="logo_pagina">Logotipo de la página web</label>
+          <input type="file" class="form-control-file" id="logo_pagina" name="logo_pagina" required>
+          <small class="text-muted">Debe seleccionar un logotipo de la página web</small>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

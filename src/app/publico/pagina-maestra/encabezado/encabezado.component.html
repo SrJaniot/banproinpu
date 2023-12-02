@@ -11,14 +11,14 @@
         </li>
 
         <li *ngIf="sesionActiva && moduloparametros" class="nav-item">
-          <a class="nav-link " aria-current="page" routerLink="/parametros">Parametros</a>
+          <a class="nav-link " aria-current="page" routerLink="/parametros/obtener-parametros">Parametros</a>
         </li>
 
         <li *ngIf="sesionActiva && modulopersonas" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/personas">Personas</a>
         </li>
 
-        <li  class="nav-item dropdown">
+        <li *ngIf="sesionActiva"  class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Proyectos
           </a>
@@ -27,7 +27,7 @@
             <li *ngIf="sesionActiva && moduloasignacion"><a class="dropdown-item" routerLink="/proyectos/asignacion">Asignación</a></li>
             <li *ngIf="sesionActiva && modulorevicion"><a class="dropdown-item" routerLink="/proyectos/revision">Revisión</a></li>
             <li *ngIf="sesionActiva && modulodevolucion"><a class="dropdown-item" routerLink="/proyectos/devolucion">Devolución</a></li>
-            <li *ngIf="sesionActiva"><a class="dropdown-item" routerLink="/proyectos/validacion">Validación</a></li>
+            <li *ngIf="sesionActiva && modulovalidacion"><a class="dropdown-item" routerLink="/proyectos/validacion">Validación</a></li>
             <li *ngIf="sesionActiva && moduloregistro"><a class="dropdown-item" routerLink="/proyectos/registro">Registro</a></li>
           </ul>
         </li>

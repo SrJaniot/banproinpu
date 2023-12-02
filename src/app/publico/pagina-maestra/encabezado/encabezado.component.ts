@@ -29,10 +29,7 @@ export class EncabezadoComponent {
     moduloinformes: boolean = false;
     moduloplandedesarrollo: boolean = false;
     modulopresupuesto: boolean = false;
-
-    modulovalidacion: boolean = false; //pendiente por agregar en el backend (Jose)
-
-
+    modulovalidacion: boolean = false; 
 
     ngOnInit(): void {
       this.validarModulos();
@@ -101,6 +98,9 @@ export class EncabezadoComponent {
                     break;
                   case 'Presupuesto':
                     this.modulopresupuesto = true;
+                    break;
+                  case 'Validación':
+                    this.modulovalidacion = true;
                     break;
                   default:
                     break;
