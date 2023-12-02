@@ -10,45 +10,45 @@
           <a class="nav-link " aria-current="page" routerLink="/inicio">Inicio</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && moduloparametros" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/parametros">Parametros</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && modulopersonas" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/personas">Personas</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item dropdown">
+        <li  class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Proyectos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/proyectos/recepcion">Recepción</a></li>
-            <li><a class="dropdown-item" routerLink="/proyectos/asignacion">Asignación</a></li>
-            <li><a class="dropdown-item" routerLink="/proyectos/revision">Revisión</a></li>
-            <li><a class="dropdown-item" routerLink="/proyectos/devolucion">Devolución</a></li>
-            <li><a class="dropdown-item" routerLink="/proyectos/validacion">Validación</a></li>
-            <li><a class="dropdown-item" routerLink="/proyectos/registro">Registro</a></li>
+            <li *ngIf="sesionActiva && modulorecepcion"><a class="dropdown-item" routerLink="/proyectos/recepcion">Recepción</a></li>
+            <li *ngIf="sesionActiva && moduloasignacion"><a class="dropdown-item" routerLink="/proyectos/asignacion">Asignación</a></li>
+            <li *ngIf="sesionActiva && modulorevicion"><a class="dropdown-item" routerLink="/proyectos/revision">Revisión</a></li>
+            <li *ngIf="sesionActiva && modulodevolucion"><a class="dropdown-item" routerLink="/proyectos/devolucion">Devolución</a></li>
+            <li *ngIf="sesionActiva"><a class="dropdown-item" routerLink="/proyectos/validacion">Validación</a></li>
+            <li *ngIf="sesionActiva && moduloregistro"><a class="dropdown-item" routerLink="/proyectos/registro">Registro</a></li>
           </ul>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && modulocertificacion" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/certificacion">Certificación</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && modulopresupuesto" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/presupuesto">Presupuesto</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && moduloplandedesarrollo" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/plan-desarrollo">P Desarrollo</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && moduloconsultas" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/consultas">Consultas</a>
         </li>
 
-        <li *ngIf="sesionActiva" class="nav-item">
+        <li *ngIf="sesionActiva && moduloinformes" class="nav-item">
           <a class="nav-link " aria-current="page" routerLink="/informes">Informes</a>
         </li>
 

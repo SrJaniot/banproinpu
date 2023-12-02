@@ -1,1 +1,12 @@
-<p>inicio works!</p>
+<div class="container rounded shadow-lg p-5 my-5" style="background-color: #333; color: #f8f9fa;">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center mb-4">
+      <h1 class="display-4" style="font-family: 'Arial', sans-serif;">Bienvenido al banco de proyectos de inversión pública</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <img [src]="imagenUrl" class="img-fluid mt-4 rounded" alt="Imagen" [ngStyle]="{'transition': 'transform .2s', 'cursor': 'pointer', 'transform': isHovering ? 'scale(1.05)' : 'scale(1)'}" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+    </div>
+  </div>
+</div>
